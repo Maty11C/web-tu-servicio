@@ -3,6 +3,7 @@ import BtnLink from "../shared/BtnLink.astro";
 import Container from "../shared/Container.astro";
 import  Navitem from "../shared/Navitem.astro";
 
+const siteBase = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const navItems = [
     {
         href:"#",
@@ -21,7 +22,7 @@ const navItems = [
         text:"Certificaciones"
     },
     {
-        href:"/#contacto",
+        href:`${siteBase}#contacto`,
         text:"Contacto"
     },
 ]
@@ -32,9 +33,9 @@ const navItems = [
         <nav class="w-full flex justify-between gap-6 relative">
             <!-- logo -->
             <div class="min-w-max inline-flex relative">
-                <a href="/" class="relative flex items-center gap-3">
+                <a href={siteBase} class="relative flex items-center gap-3">
                     <img
-                        src="/logos/logo.jpeg"
+                        src={`${siteBase}logos/logo.jpeg`}
                         alt="TU SERVICIO SRL"
                         class="h-14 w-auto rounded-xl"
                     />
