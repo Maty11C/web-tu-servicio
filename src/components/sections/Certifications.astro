@@ -1,0 +1,51 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import { certifications } from "../../utils/data.ts";
+---
+
+<section id="certificaciones" class="pb-20 scroll-mt-24">
+    <Container>
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-12">
+            <Title>Certificaciones</Title>
+            <Paragraph>
+                Cumplimos con normas y estándares que respaldan la calidad de nuestro servicio y el cuidado de las personas y el ambiente.
+            </Paragraph>
+        </div>
+
+        <div
+            class="w-full relative py-8 md:py-10 px-6 md:px-8 rounded-2xl bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 dark:to-transparent border border-box-border/60"
+        >
+            <div class="absolute right-0 top-0 h-full w-full flex justify-end pointer-events-none">
+                <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl opacity-80">
+                    <span class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"></span>
+                    <span class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"></span>
+                    <span class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"></span>
+                </div>
+            </div>
+
+            <div class="relative grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+                {
+                    certifications.map((item) => (
+                        <article class="rounded-xl border border-box-border bg-box-bg/80 dark:bg-box-bg/40 backdrop-blur-sm p-5 md:p-6 shadow-lg shadow-box-shadow flex flex-col gap-3">
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="shrink-0 mt-0.5 rounded-lg bg-primary/15 text-primary p-2"
+                                    aria-hidden="true"
+                                    set:html={item.icon}
+                                />
+                                <div class="min-w-0">
+                                    <h3 class="font-semibold text-heading-2 text-lg">{item.title}</h3>
+                                    <p class="mt-2 text-heading-3 text-sm md:text-base leading-relaxed">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </Container>
+</section>

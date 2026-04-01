@@ -1,47 +1,71 @@
 ---
-import Info from "../cards/Info.astro";
 import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 
 ---
 
 <section id="about-us">
-    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
-        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0  lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
-            <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12 items-start">
+        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-6 xl:pr-8 flex-shrink-0 w-11/12 midmd:w-5/12 lg:w-[38%] xl:w-[34%] midmd:sticky midmd:top-28">
+            <div class="w-full h-64 sm:h-72 midmd:h-[min(28rem,70vh)] relative">
                 <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
                 <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
-                
+
                 <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
-                <img src={"/images/dev-with-c-1.webp"} alt="banner image" 
+                <img src={"/images/dev-with-c-1.webp"} alt="banner image"
                 width="1240" height="1385"
                 class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
             </div>
         </div>
-        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
+        <div class="flex-1 flex flex-col min-w-0 midmd:w-7/12 lg:w-[62%] xl:w-[66%]">
             <Title>
-                We help drive your business forward faster
+                Nosotros
             </Title>
-            <Paragraph className="mt-8">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, saepe aliquid autem alias vero distinctio dignissimos consequatur? Excepturi quibusdam, quam ipsum hic, laudantium ducimus suscipit, culpa facere consequuntur repellat delectus.
-            </Paragraph>
-            <div class="pt-8 grid grid-cols-2 items-center gap-4 max-w-3xl md:max-w-[none]">
-                <Info description="Lorem ipsum dolor sit amet consectetur" title="Mission">
-                    <span slot="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                        </svg>                              
-                    </span>
-                </Info>
-                <Info description="Lorem ipsum dolor sit amet consectetur" title="Vision">
-                    <span slot="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </span>
-                </Info>
+            <div class="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
+                <article class="p-4 sm:p-5 rounded-2xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden flex flex-col h-full">
+                    <h3 class="text-lg md:text-xl font-semibold text-heading-2 mb-3">MISIÓN</h3>
+                    <div class="space-y-3 text-heading-3 text-sm sm:text-base md:text-[0.95rem] md:leading-relaxed">
+                        <p>
+                            Somos una empresa de servicios de limpieza, conformada por personas acostumbradas al trabajo activo y al constante cambio que va surgiendo en el mercado. Contamos con personal capacitado y preparado para satisfacer las necesidades de nuestros clientes; buscando realizar un servicio de calidad.
+                        </p>
+                        <p>
+                            Brindamos a nuestros clientes (públicos y privados) un servicio acorde a sus necesidades; atendiendo al mismo tiempo las necesidades y expectativas de nuestros recursos humanos.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="p-4 sm:p-5 rounded-2xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden flex flex-col h-full">
+                    <h3 class="text-lg md:text-xl font-semibold text-heading-2 mb-3">VISIÓN</h3>
+                    <div class="space-y-3 text-heading-3 text-sm sm:text-base md:text-[0.95rem] md:leading-relaxed">
+                        <p>
+                            Aspiramos a ser una empresa dentro del segmento de las medianas empresas de servicios de limpieza; pero diferenciándonos de las demás por la excelencia de nuestro trabajo, la calidad de las personas que trabajan con nosotros, el cuidado de la seguridad y salud de las personas y del ambiente y el cumplimiento de todos los requisitos aplicables.
+                        </p>
+                        <p>
+                            Buscamos construir un vínculo sustentado desde la integridad y la transparencia con nuestros clientes, recursos humanos y proveedores, que perduren a través del tiempo, con mutuo beneficio, lo cual nos convertirá en una empresa sustentable.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="p-4 sm:p-5 rounded-2xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden flex flex-col h-full md:col-span-2 xl:col-span-1">
+                    <h3 class="text-lg md:text-xl font-semibold text-heading-2 mb-3">VALORES</h3>
+                    <div class="space-y-3 text-heading-3 text-sm sm:text-base md:text-[0.95rem] md:leading-relaxed">
+                        <p>
+                            Valoramos por sobre todo a las personas que conforman la empresa, buscando que se sientan con ganas de permanecer con nosotros; respetándolas a ellas y a sus derechos.
+                        </p>
+                        <p>
+                            Formamos equipos de trabajo con personas que entienden el compromiso y la responsabilidad de ser la imagen de DOMIN SRL, y que se desempeñan con profesionalismo y autonomía.
+                        </p>
+                        <p>
+                            Nuestro sello distintivo es el esfuerzo por la excelencia de nuestro trabajo, y la buena relación con nuestros clientes.
+                        </p>
+                        <p>
+                            El cuidado del ambiente y la seguridad y salud de las personas es otro pilar en el que se sustenta nuestra manera de trabajar.
+                        </p>
+                        <p>
+                            Mantenemos una gestión abierta y transparente, basada en el respeto por las leyes y las normas internas, generadora de confianza en nuestros colaboradores, competidores, proveedores, clientes e instituciones con las cuales interactuamos; que es parte de nuestro patrimonio y pilar fundamental de nuestra empresa.
+                        </p>
+                    </div>
+                </article>
             </div>
         </div>
     </Container>
